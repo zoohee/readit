@@ -22,4 +22,6 @@ public interface MemberProblemRepository extends JpaRepository<MemberProblem,Int
     List<MemberProblem> findByMemberAndArticle(Member member, Article article);
 
     List<MemberProblem> findByMemberAndSolvedAt(Member member, LocalDate solvedAt);
+
+    List<MemberProblem> findByMember_IdAndSolvedAt(Integer memberId, LocalDate solvedAt);
 }

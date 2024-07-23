@@ -26,7 +26,7 @@ public class CommunityController {
 
     private final CommunityService communityService;
 
-    @ExecutionTime
+//    @ExecutionTime
     @GetMapping("/list")
     @Operation(summary = "커뮤니티 모집글 조회", description = "커뮤니티 리스트 조회 기능입니다.")
     public ResponseEntity<GetCommunityListResponse> getCommunityList(@RequestParam(required = false) String category,
@@ -89,7 +89,7 @@ public class CommunityController {
         return ResponseEntity.ok().build();
     }
 
-    @ExecutionTime
+//    @ExecutionTime
     @GetMapping("/hot")
     @Operation(summary = "커뮤니티 인기글 8개 조회", description = "커뮤니티 인기글 조회 기능입니다.")
     public ResponseEntity<GetHotCommunityResponse> getHotCommunityList() {

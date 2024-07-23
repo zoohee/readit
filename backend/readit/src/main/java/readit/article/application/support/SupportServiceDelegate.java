@@ -50,4 +50,9 @@ public class SupportServiceDelegate {
     public List<MemberArticle> getRecentTempArticles(Integer id){
         return supportEmptyToNull(() -> memberArticleRepository.findTempArticle(id));
     }
+
+    // TODO: 수정 필요
+    public List<MemberArticle> getMemberArticleListByMemberId(Integer id) {
+        return supportEmptyToNull(() -> getCompleteArticle(id));
+    }
 }
